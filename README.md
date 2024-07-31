@@ -1,6 +1,8 @@
-# What is esp32-wifi-manager?
+# Credits
 
-### Build status [![Build Status](https://travis-ci.com/tonyp7/esp32-wifi-manager.svg?branch=master)](https://travis-ci.com/tonyp7/esp32-wifi-manager)
+#### Credits to [@tonyp7](https://github.com/tonyp7) for creating the library and to [@someone42](https://github.com/someone42), [@adamm](https://github.com/adamm), [@huardti](https://github.com/huardti) and [@Rimco](https://github.com/Rimco) for PRs.
+
+# What is esp32-wifi-manager?
 
 *esp32-wifi-manager* is a pure C esp-idf component for ESP32 that enables easy management of wifi networks through a web portal.
 
@@ -27,9 +29,6 @@
 # Demo
 [![esp32-wifi-manager demo](http://img.youtube.com/vi/hxlZi15bym4/0.jpg)](http://www.youtube.com/watch?v=hxlZi15bym4)
 
-# Look and Feel
-![esp32-wifi-manager on an mobile device](https://idyl.io/wp-content/uploads/2017/11/esp32-wifi-manager-password.png "esp32-wifi-manager") ![esp32-wifi-manager on an mobile device](https://idyl.io/wp-content/uploads/2017/11/esp32-wifi-manager-connected-to.png "esp32-wifi-manager")
-
 # Getting Started
 
 ## Requirements
@@ -46,7 +45,7 @@ There are breaking changes and new features in esp-idf 4.1 and 4.2 which makes e
 Clone the repository where you want it to be. If you are unfamiliar with Git, you can use Github Desktop on Windows:
 
 ```bash 
-git clone https://github.com/tonyp7/esp32-wifi-manager.git
+git clone https://github.com/pires22/esp32-wifi-manager.git
 ```
 
 Navigate under the included example:
@@ -73,9 +72,7 @@ esp32-wifi-manager can be configured without touching its code. At the project l
 idf.py menuconfig
 ```
 
-Navigate in "Component config" then pick "Wifi Manager Configuration". You will be greeted by the following screen:
-
-![esp32-wifi-manager-menuconfig](https://idyl.io/wp-content/uploads/2020/08/wifi-manager-menuconfig-800px.png "menuconfig screen")
+Navigate in "Component config" then pick "Wifi Manager Configuration".
 
 You can change the ssid and password of the access point at your convenience, but it is highly recommended to keep default values. Your password should be between 8 and 63 characters long, to comply with the WPA2 standard. If the password is set to an empty value or is less than 8 characters long, esp32-wifi-manager will create its access point as an open wifi network.
 
@@ -96,9 +93,6 @@ Your project should look like this:
     - main
       - main.c
 
-Under eclipse, this is what a typical project looks like:
-
-![eclipse project with esp32-wifi-manager](https://idyl.io/wp-content/uploads/2020/07/eclipse-idf-project.png "eclipse project with esp32-wifi-manager")
 
 Once this is done, you need to edit the CMakeLists.txt file at the root of your project to register the components folder. This is done by adding the following line:
 
@@ -198,7 +192,7 @@ The [examples/default_demo](examples/default_demo) demonstrates how you can read
 Because esp32-wifi-manager spawns its own http server, you might want to extend this server to serve your own pages in your application. It is possible to do so by registering your own URL handler using the standard esp_http_server signature:
 
 ```c
-esp_err_t my_custom_handler(httpd_req_t *req){
+esp_err_t my_custom_handler(httpd_req_t *req){}
 ```
 
 And then registering the handler by doing
