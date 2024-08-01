@@ -24,7 +24,7 @@ config WIFI_MANAGER_MAX_RETRY_START_AP
 
 config WIFI_MANAGER_SHUTDOWN_AP_TIMER
 	int "Time (in ms) to wait before shutting down the AP"
-	default 60000
+	default 1500
 	help
 	Defines the time (in ms) to wait after a succesful connection before shutting down the access point. Use a negative number to never shut down the access point.
 
