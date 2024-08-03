@@ -138,25 +138,6 @@ docReady(async function () {
     false
   );
 
-  gel("ok-credits").addEventListener(
-    "click",
-    () => {
-      gel("credits").style.display = "none";
-      gel("app").style.display = "block";
-    },
-    false
-  );
-
-  gel("acredits").addEventListener(
-    "click",
-    () => {
-      event.preventDefault();
-      gel("app").style.display = "none";
-      gel("credits").style.display = "block";
-    },
-    false
-  );
-
   gel("ok-connect").addEventListener(
     "click",
     () => {

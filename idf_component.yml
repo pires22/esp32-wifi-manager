@@ -1,0 +1,5 @@
+version: "0.0.1"
+description: Captive Portal for ESP32 that can connect to a saved wireless network or start an access point where you can connect to existing wifis.
+url: https://github.com/pires22/esp32-wifi-manager
+dependencies:
+  idf: ">=4.3"
